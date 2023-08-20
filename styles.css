@@ -1,0 +1,163 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+.navbar {
+  height: 80px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: black;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  transition: ease 0.3s;
+}
+.navbar.navbar--up {
+  top: -40px;
+  transition: ease 0.4s;
+}
+.navbar.navbar-scrolled {
+  height: 70px;
+  background: white;
+  color: black;
+}
+.container {
+    max-width: 1200px;
+    margin-bottom:300px;
+    margin-top: 400px;
+}
+
+.header-section {
+    background: url(img.png) center/cover no-repeat;
+    height: 80vh;
+     display: flex;
+    align-items: center;
+    margin-bottom: 300px;
+    margin-top: 50px;
+}
+.animated-content{
+     display: flex;
+    align-items: center;
+    justify-content: center;
+    background: black;
+}
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+}
+
+.image-grid img {
+    max-width: 400px;
+    max-height: 250px;
+    width: auto;
+    height: auto;
+    opacity: 0; 
+    transform: translateY(0); 
+    transition: opacity 0.5s, transform 0.5s; 
+}
+.text-animation {
+    background: white;
+    height: 300px;
+    margin-bottom: 200px;
+    margin-top: 200px;
+     display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.scroll-triggered-transform {
+    display: flex;
+    background: black;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    width:1520px;
+
+}
+
+.element-to-scale {
+     display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
+    margin-bottom: 250px;
+    background-color: #3498db;
+    transform: scale(1);
+    transition: transform 0.10s ease-in-out;
+}
+
+.typewriter-text  {
+    white-space: nowrap; 
+    overflow: hidden; 
+    border-right: 2px solid white; 
+    font-size: 25px;
+    line-height: 1.4;
+    justify-content: center;
+    text-align: center;
+    align-items: center;}
+    .container2{
+        margin-bottom: 50px;
+    }
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blinkTextCursor {
+    from,
+    to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: white;
+    }
+}
+h2{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.image-grid img.fade-in {
+    opacity: 1;
+    transform: translateY(50px); 
+    transition: all 1s ease-out;
+}
+.fade-in {
+    opacity: 1; 
+    transition: all 0.8s ease-in-out;
+}
+.image-grid img {
+    opacity: 0; /* Initially, make the images fully transparent */
+    transform: translateY(50px); /* Adjust the initial position if needed */
+    transition: all 1s ease-out; /* Add transition for smooth effect */
+}
+
+/* Final state when "fade-in-visible" class is applied */
+.fade-in-visible {
+    opacity: 1; /* Set opacity to 1 to make it fully visible */
+    transform: translateY(0); 
+}
+.reset{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.reset #resetButton{
+    background-color: #3498db;
+    color: black;
+    font-size: 25px;
+}
